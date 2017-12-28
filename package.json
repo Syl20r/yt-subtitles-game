@@ -1,0 +1,28 @@
+{
+  "name": "yt-subtitles-game",
+  "version": "1.0.0",
+  "description": "Youtube subtitles game",
+  "main": "server/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Syl20r/yt-subtitles-game.git"
+  },
+  "keywords": [
+    "youtube",
+    "subtitle",
+    "game"
+  ],
+  "author": "Syl20r",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Syl20r/yt-subtitles-game/issues"
+  },
+  "homepage": "https://github.com/Syl20r/yt-subtitles-game#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "socketio": "^1.0.0"
+  }
+}
