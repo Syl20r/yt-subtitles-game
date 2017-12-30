@@ -221,6 +221,7 @@
 			firstInit();
 		}
 
+		// var newSrc = iframe.src;
 		var newSrc = iframe.src;
 
 		if (newSrc.indexOf('enablejsapi=1') === -1) {
@@ -240,7 +241,12 @@
 		}
 
 		loadIframeApi(proxy(function() {
-			this.player  = new root.YT.Player(iframe);
+			this.player  = new root.YT.Player(iframe, {
+				events: {
+          'onReady': onPlayerReady,
+          'onStateChange': onPlayerStateChange
+				}
+			});
 			this.videoId = this.getCurrentVideoId();
 
 			this.element = root.document.createElement('div');

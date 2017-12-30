@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>TEST</title>
+  <script src="client/js/youtube.external.subtitle.js"></script>
+  <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div id="player"></div>
+
+  <script src="http://www.youtube.com/player_api"></script>
+
+  <script>
+    var subtitle = [{
+      "start": 0,
+      "end": 15,
+      "text": "sub"
+    }];
+    //var urlVideo = "https://www.youtube.com/embed/fGPPfZIvtCw?cc_load_policy=3&rel=0&controls=0&autoplay=1&showinfo=0&iv_load_policy=3&start=11&end=14";
+    var urlVideo = "https://www.youtube.com/embed/fGPPfZIvtCw?cc_load_policy=3&autoplay=1&showinfo=0&iv_load_policy=3&start=11&end=14";
+    $('#player').append('<iframe id="video" width="100%" height="900px" src="'+urlVideo+'" frameborder="0" allowfullscreen="true"></iframe>');
+
+    var youtubeExternalSubtitle = new YoutubeExternalSubtitle.Subtitle(document.getElementById('video'), subtitle);
+  </script>
+
+
+</body>
+
+</html>
