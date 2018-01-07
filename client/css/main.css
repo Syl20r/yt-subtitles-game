@@ -1,7 +1,11 @@
 .youtube-external-subtitle {
   color: yellow;
-  text-shadow: -2px 0 black, 0 2px black,
-    2px 0 black, 0 -2px black;
+  /*text-shadow: -4px 0 black, 0 4px black,
+    4px 0 black, 0 -4px black;*/
+    text-shadow: 2px 0 0 black, 0 2px 0 black,
+     0 -2px 0 black, -2px 0 0 black,
+      2px 2px 0 black, 2px -2px 0 black,
+       -2px 2px 0 black, -2px -2px 0 black;
   background: none;
-  font-size: 25px;
+  font-size: 40px;
 }

@@ -51,7 +51,7 @@ function selectSub() {
   playVideo(VIDEO, sub);
 }
 
-function playVideo(video, sub='...') {
+function playVideo(video, sub='[Insérer un sous-titre]') {
   var subtitle = [
     {
       "start": video.original_start,

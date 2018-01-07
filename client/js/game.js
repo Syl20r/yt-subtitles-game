@@ -9,11 +9,12 @@ $(function() {
     for (var i in propositions) {
       data += '<input type="radio" name="sub" value="'+propositions[i].id+'"> '+propositions[i].sub+'<br>';
     }
+    data += '<input type="button" onclick="validVote()" value="Valider le vote">';
     $('#vote').append(data);
   });
 });
 
-$('#validVote').click(function () {
+function validVote() {
   sock.emit('vote', $('input[name=sub]:checked').val());
   $('#vote').empty();
   sock.on('voteResult', function (res) {
@@ -25,7 +26,7 @@ $('#validVote').click(function () {
     $('#vote').append(data);
 
   });
-});
+}
 
 $('#validSub').click(function () {
   var subtitle = $('#subtitle').val();
